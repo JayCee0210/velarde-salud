@@ -1,0 +1,166 @@
+@import "tailwindcss";
+
+:root {
+  --fondo: #f4fbfb;
+  --superficie: #ffffff;
+  --tinta: #102a2f;
+  --tinta-suave: #52666a;
+  --petroleo-950: #04232a;
+  --petroleo-900: #062f37;
+  --petroleo-800: #0b3b44;
+  --petroleo-700: #0f4c56;
+  --petroleo-600: #14626e;
+  --turquesa-600: #087f82;
+  --turquesa-500: #10b7ad;
+  --turquesa-300: #73ded4;
+  --turquesa-100: #d7f6f2;
+  --salvia-600: #6e8f6a;
+  --salvia-100: #eaf0e6;
+  --arena-100: #e8f4f2;
+  --arena-50: #f2f9f8;
+  --borde: #e4e8e6;
+  --peligro: #b42318;
+  --peligro-suave: #fef3f2;
+  --exito: #067647;
+  --exito-suave: #ecfdf3;
+  --aviso: #b54708;
+  --aviso-suave: #fffaeb;
+  --radio: 0.9rem;
+}
+
+@theme inline {
+  --color-fondo: var(--fondo);
+  --color-superficie: var(--superficie);
+  --color-tinta: var(--tinta);
+  --color-tinta-suave: var(--tinta-suave);
+  --color-petroleo-950: var(--petroleo-950);
+  --color-petroleo-900: var(--petroleo-900);
+  --color-petroleo-800: var(--petroleo-800);
+  --color-petroleo-700: var(--petroleo-700);
+  --color-petroleo-600: var(--petroleo-600);
+  --color-turquesa-600: var(--turquesa-600);
+  --color-turquesa-500: var(--turquesa-500);
+  --color-turquesa-300: var(--turquesa-300);
+  --color-turquesa-100: var(--turquesa-100);
+  --color-salvia-600: var(--salvia-600);
+  --color-salvia-100: var(--salvia-100);
+  --color-arena-100: var(--arena-100);
+  --color-arena-50: var(--arena-50);
+  --color-borde: var(--borde);
+  --color-peligro: var(--peligro);
+  --color-peligro-suave: var(--peligro-suave);
+  --color-exito: var(--exito);
+  --color-exito-suave: var(--exito-suave);
+  --color-aviso: var(--aviso);
+  --color-aviso-suave: var(--aviso-suave);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-display: var(--font-display);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--fondo);
+  color: var(--tinta);
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--turquesa-300);
+  color: var(--petroleo-950);
+}
+
+a,
+button,
+input,
+select,
+textarea {
+  outline-color: var(--turquesa-600);
+}
+
+:focus-visible {
+  outline: 2px solid var(--turquesa-600);
+  outline-offset: 2px;
+}
+
+button,
+[role="button"] {
+  touch-action: manipulation;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+.textura-medica {
+  background-color: var(--petroleo-950);
+  background-image:
+    radial-gradient(circle at 12% 18%, rgba(16, 183, 173, 0.42), transparent 42%),
+    radial-gradient(circle at 88% 8%, rgba(115, 222, 212, 0.22), transparent 35%),
+    radial-gradient(circle at 50% 100%, rgba(76, 182, 170, 0.2), transparent 45%);
+}
+
+.panel-medico {
+  background:
+    radial-gradient(circle at 100% 0%, rgba(16, 183, 173, 0.13), transparent 30rem),
+    radial-gradient(circle at 0% 40%, rgba(115, 222, 212, 0.09), transparent 26rem),
+    linear-gradient(135deg, #eff9f8 0%, #f7fbfa 48%, #eef7f6 100%);
+}
+
+.panel-medico main {
+  min-height: calc(100dvh - 4rem);
+}
+
+@media (max-width: 1023px) {
+  .panel-medico main {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.22), transparent 18rem);
+  }
+}
+
+.patron-puntos {
+  background-image: radial-gradient(rgba(11, 59, 68, 0.12) 1px, transparent 1px);
+  background-size: 18px 18px;
+}
+
+.sombra-suave {
+  box-shadow: 0 1px 2px rgba(6, 47, 55, 0.04), 0 12px 32px -20px rgba(6, 47, 55, 0.28);
+}
+
+.ocultar-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.ocultar-scroll {
+  scrollbar-width: none;
+}
+
+.solo-impresion {
+  display: none;
+}
+
+@media print {
+  .no-impresion {
+    display: none !important;
+  }
+  .solo-impresion {
+    display: block;
+  }
+  body {
+    background: #fff;
+  }
+}

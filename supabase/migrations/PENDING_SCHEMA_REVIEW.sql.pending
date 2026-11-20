@@ -1,0 +1,15 @@
+-- VELARDE DIGITAL — BORRADOR NO EJECUTABLE
+--
+-- Este archivo NO es una migración aprobada y no debe ejecutarse.
+-- El respaldo local solo contiene especialidades, servicios y pacientes;
+-- faltan los nombres reales de las tablas multiclínica, sus relaciones,
+-- funciones, triggers, RLS y Storage. No se inventan DDL ni políticas.
+--
+-- Antes de convertirlo en una migración:
+-- 1. Obtener exportación autorizada del esquema remoto de desarrollo.
+-- 2. Mapear clínicas, sucursales, membresías, roles y permisos.
+-- 3. Mapear agenda, solicitudes, citas, bloqueos y restricciones de solapamiento.
+-- 4. Mapear pacientes, consultas, notas/enmiendas, obstetricia, laboratorio,
+--    documentos, prescripciones, seguimientos y auditoría.
+-- 5. Revisar aislamiento por clinica_id y políticas RLS con usuarios sintéticos.
+-- 6. Generar tipos TypeScript y someter el SQL a aprobación independiente.

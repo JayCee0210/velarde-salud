@@ -1,0 +1,82 @@
+# ============================================================
+# VELARDE DIGITAL — .gitignore
+# Proyecto Next.js / TypeScript / Node.js + Supabase
+# ============================================================
+
+# --- Variables de entorno (NUNCA subir secretos) ---
+.env
+.env.local
+.env.*.local
+.env.development
+.env.production
+.env.test
+!.env.example
+
+# --- Dependencias ---
+node_modules/
+.pnp
+.pnp.js
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# --- Build de Next.js ---
+.next/
+out/
+build/
+dist/
+.turbo/
+
+# --- Compiladores / bundlers ---
+*.tsbuildinfo
+next-env.d.ts
+
+# --- Logs ---
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# --- Editor / sistema ---
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+desktop.ini
+*.pem
+
+# --- Temporales ---
+tmp/
+temp/
+*.tmp
+*.temp
+.cache/
+.parcel-cache/
+
+# --- Tests / cobertura ---
+coverage/
+.nyc_output/
+*.lcov
+
+# --- Cache de herramientas ---
+.eslintcache
+.stylelintcache
+
+# --- Supabase local (si se usa CLI) ---
+supabase/.temp/
+supabase/.branches/
+
+# --- Despliegue ---
+.vercel
+
+# --- Archivos del sistema ---
+*.pid
+*.seed
+*.pid.seed
